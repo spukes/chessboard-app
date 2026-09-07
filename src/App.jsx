@@ -4,7 +4,7 @@ import Home from './components/Home'
 import Classroom from './components/Classroom'
 
 // Connect to the same host if in prod, otherwise localhost:3001
-export const socket = io(import.meta.env.PROD ? '/' : 'http://localhost:3001');
+export const socket = io(import.meta.env.PROD ? '/' : 'https://chessboard-server-0voc.onrender.com');
 
 function App() {
     const [view, setView] = useState('HOME'); // HOME | CLASSROOM
