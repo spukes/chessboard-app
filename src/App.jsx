@@ -3,8 +3,8 @@ import io from 'socket.io-client'
 import Home from './components/Home'
 import Classroom from './components/Classroom'
 
-// Connect to the same host if in prod, otherwise localhost:3001
-export const socket = io(import.meta.env.PROD ? '/' : 'https://chessboard-server-0voc.onrender.com');
+// Connect directly to Render Cloud backend everywhere
+export const socket = io('https://chessboard-server-0voc.onrender.com');
 
 function App() {
     const [view, setView] = useState('HOME'); // HOME | CLASSROOM
